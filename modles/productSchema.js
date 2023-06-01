@@ -2,9 +2,7 @@ const mongoose = require("mongoose")
 
 const productSchema = new mongoose.Schema({
 
-    product_Id: {
-        type: Number
-    },
+
     product_name: {
         type: String,
         require: true,
@@ -36,5 +34,5 @@ const productSchema = new mongoose.Schema({
     }
 
 })
-userSchema.set('timestamps', true)
+productSchema.set('timestamps', true)
 module.exports = mongoose.model('products', productSchema)

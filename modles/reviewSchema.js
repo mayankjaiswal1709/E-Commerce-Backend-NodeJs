@@ -2,19 +2,18 @@ const mongoose = require("mongoose")
 
 const reviewSchema = new mongoose.Schema({
 
-    review_Id: {
-        type: Number
-    },
-    product_Id: {
-        type: Number,
+    productId: {
+        type: mongoose.Schema.Types.ObjectId,
         require: true,
+    
     },
-    user_Id: {
-        type: Number,
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
         require: true,
+    
     },
     product_review: {
-        type: Number,
+        type: String,
         require: true,
     },
     product_image: {

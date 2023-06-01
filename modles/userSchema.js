@@ -3,9 +3,6 @@ const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
 
-    user_Id: {
-        type: Number
-    },
     userName: {
         type: String,
         require: true,
@@ -37,7 +34,7 @@ const userSchema = new mongoose.Schema({
     },
     userCountry:{
         type:String,
-        require:true, 
+        // require:true, 
     },
     userProfilePic:{
         type:String,

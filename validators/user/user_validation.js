@@ -6,7 +6,7 @@ module.exports = {
         if (value.error) {
             res.json({
                 success: false,
-                message: value.error.details[0].meassage
+                message: value.error.details[0].message
             })
         } else {
             next();

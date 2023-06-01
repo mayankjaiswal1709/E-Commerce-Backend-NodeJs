@@ -1,29 +1,31 @@
 const mongoose = require("mongoose")
+require("./userSchema")
+require("./productSchema")
+
 
 const cartSchema = new mongoose.Schema({
 
-    cart_Id: {
-        type: Number
-    },
-    product_Id: {
-        type: Number,
+    productId: {
+        type: mongoose.Schema.Types.ObjectId,
         require: true,
     },
-    user_Id: {
+    product_quantiy: {
         type: Number,
+        require: true,
+        default: 0,
+    },
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
         require: true,
     },
     product_name: {
         type: Number,
         require: true,
     },
-    product_quantiy: {
-        type: String,
-        requier: true,
-    },
     product_status: {
         type: String,
         require: true,
+    
     },
 
     isActive: {
