@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "7bbd02a5-08d4-4370-8250-7435d07b1c15",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15263448"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "RegisterUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userName",
+									"value": "Mayank",
+									"type": "text"
+								},
+								{
+									"key": "userEmail",
+									"value": "mayank0051@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userPassword",
+									"value": "Mayank@123",
+									"type": "text"
+								},
+								{
+									"key": "userAddress",
+									"value": "kunda nagar khargone",
+									"type": "text"
+								},
+								{
+									"key": "userCity",
+									"value": "Khargone",
+									"type": "text"
+								},
+								{
+									"key": "userState",
+									"value": "mp",
+									"type": "text"
+								},
+								{
+									"key": "userPhoneno",
+									"value": "9340163319",
+									"type": "text"
+								},
+								{
+									"key": "userCountry",
+									"value": "India",
+									"type": "text"
+								},
+								{
+									"key": "userProfilePic",
+									"type": "file",
+									"src": "/C:/Users/91934/Downloads/A fantasy comic book style portrait painting of a -removebg-preview.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/signupuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"signupuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\": \"Mayankjaiswal20@gmail.com\",\r\n    \"userPassword\": \"Mayank@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/loginuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"loginuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\":\"mayank0051@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/forgetpassworduser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"forgetpassworduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetpassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"newPassword\":\"myank123\",\r\n    \"confirmPassword\":\"myank123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/restpassworduser/646dee4122a57d046db41239/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDZkZWU0MTIyYTU3ZDA0NmRiNDEyMzkiLCJpYXQiOjE2ODU1Mjg0NDAsImV4cCI6MTY4NTUyOTA0MH0.LCQt3AEcBCrPw9cdEHyhwlOa94kqeo6dDpLPppytWIo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"restpassworduser",
+								"646dee4122a57d046db41239",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDZkZWU0MTIyYTU3ZDA0NmRiNDEyMzkiLCJpYXQiOjE2ODU1Mjg0NDAsImV4cCI6MTY4NTUyOTA0MH0.LCQt3AEcBCrPw9cdEHyhwlOa94kqeo6dDpLPppytWIo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "cellphone",
+									"type": "text"
+								},
+								{
+									"key": "product_description",
+									"value": "good product",
+									"type": "text"
+								},
+								{
+									"key": "product_price",
+									"value": "7000",
+									"type": "text"
+								},
+								{
+									"key": "product_categories",
+									"value": "technical",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/D:/new downloads/New dow/iphone 13.jpg"
+								},
+								{
+									"key": "product_company",
+									"value": "bajabj",
+									"type": "text"
+								},
+								{
+									"key": "userRole",
+									"value": "vendor",
+									"type": "text"
+								},
+								{
+									"key": "userRole",
+									"value": "admin",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/product/addproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"addproduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/product/allproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"allproduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product via name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/product/productsvianame/cellphone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"productsvianame",
+								"cellphone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product details",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \r\n            \"product_name\": \"bottel\",\r\n            \"product_description\": \"good metal product\",\r\n            \"product_price\": 7000,\r\n            \"product_categories\": \"technical\",\r\n            \"product_company\": \"milton\"\r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/product/updateproduct/647081fca423a5d1f72ac08c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"updateproduct",
+								"647081fca423a5d1f72ac08c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/product/deleteproduct/64707a6ec78425675a6f2cda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"deleteproduct",
+								"64707a6ec78425675a6f2cda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "add review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_review",
+									"value": "acchi product hai niceeee",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/C:/Users/91934/Downloads/iphone 13.jpg"
+								},
+								{
+									"key": "product_rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "productId",
+									"value": "64707a5f67e8c6f3c60fb59f",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "64719ba5b3934db5153da2fa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/review/addreview",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"review",
+								"addreview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/review/getallreview",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"review",
+								"getallreview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update review",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n            \"product_review\": \"harsha acchi  hai bhai\",\r\n            \"product_rating\": \"5\"\r\n            \r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/review/updatereview/647474a55a6000121d8824bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"review",
+								"updatereview",
+								"647474a55a6000121d8824bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/review/deltereview/6471a5bd52cf293b2b996cc8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"review",
+								"deltereview",
+								"6471a5bd52cf293b2b996cc8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "add product to cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cart/addproducttocart/64660d75913d723b650be1bc/64707a5f67e8c6f3c60fb59f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cart",
+								"addproducttocart",
+								"64660d75913d723b650be1bc",
+								"64707a5f67e8c6f3c60fb59f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cart Item  List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/cart/listproducttocart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cart",
+								"listproducttocart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update prodtuct to cart",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_quantiy\":35\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cart/updateproducttocart/647886d00cc93efa2b0cc73d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cart",
+								"updateproducttocart",
+								"647886d00cc93efa2b0cc73d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/cart/deleteproducttocart/647886d60cc93efa2b0cc73f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cart",
+								"deleteproducttocart",
+								"647886d60cc93efa2b0cc73f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

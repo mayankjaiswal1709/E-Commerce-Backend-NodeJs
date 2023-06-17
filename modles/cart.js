@@ -8,24 +8,22 @@ const cartSchema = new mongoose.Schema({
     productId: {
         type: mongoose.Schema.Types.ObjectId,
         require: true,
+        ref: "products"
     },
     product_quantiy: {
         type: Number,
         require: true,
-        default: 0,
+        default: 1,
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         require: true,
-    },
-    product_name: {
-        type: Number,
-        require: true,
+        ref:"user"
     },
     product_status: {
         type: String,
         require: true,
-    
+
     },
 
     isActive: {

@@ -21,7 +21,7 @@ const productSchema = new mongoose.Schema({
     },
     product_image: {
         type: String,
-        requier: true,
+        // requier: true,
     },
     product_company: {
         type: String,

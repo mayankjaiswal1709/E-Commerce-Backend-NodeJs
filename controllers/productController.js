@@ -2,6 +2,7 @@ const express = require("express");
 const productSchema = require("../modles/productSchema");
 const fs = require("fs")
 const uploads = require('../middwlwear/imageStorage')
+
 // FOR VENDOR ALL API'S 
 // add product api
 const addProduct = async (req, res) => {
@@ -118,7 +119,7 @@ const deleteProduct = async (req, res) => {
         if (selectdeleteProduct != null) {
             res.status(200).json({
                 success: true,
-                message: "your product deleted succrssfully "
+                message: "your product deleted succrssfully"
             })
         } else {
             res.status(404).json({
